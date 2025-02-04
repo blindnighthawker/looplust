@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SinSwipe Feed</title>
+    <link rel="stylesheet" href="feed.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="photos/logo.png" alt="sinswipe" class="logo-img"> <!-- Updated logo -->
+            </div>
+            <input type="text" class="search-bar" placeholder="🔍 Search">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/user-dashboard.html">🏠 Home</a></li>
+                    <li><a href="#" data-page="discover">🌍 Discover</a></li>
+                    <li><a href="#" data-page="inbox">📬 Inbox</a></li>
+                </ul>
+                <button id="create-video">Send a Sin</button>
+                <div id="user-profile">
+                    <img src="photos/corina.png" class="profile-pic">
+                    <span>Corinna Kopf</span>
+                </div>
+            </nav>
+        </aside>
+        
+        <main class="content">
+            <section id="video-feed" class="feed">
+                <!-- Videos will be dynamically inserted here -->
+            </section>
+        </main>
+
+        <aside class="sidebar-right">
+          
+        </aside>
+
+    </div>
+
+    <script src="feed.js"></script>
+</body>
+</html>
