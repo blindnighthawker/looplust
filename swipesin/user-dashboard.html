@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lustloop User Dashboard</title>
+    <link rel="stylesheet" href="user-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="logo">
+            <img src="photos/logo.png" alt="Lustloop Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/feed.html">Feed</a></li>
+                <li><a href="/profile.html">Profile</a></li>
+                <li><a href="#messages">Messages</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-content">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <img src="photos/sophie.png" alt="User Profile Picture" class="profile-pic">
+                <h2>Sophie Rain</h2>
+                <p>@sophierain</p>
+                <button class="create-post-btn">Create Post</button>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#earnings"><i class="fas fa-dollar-sign"></i> Earnings</a></li>
+                <li><a href="#subscribers"><i class="fas fa-users"></i> Subscribers</a></li>
+                <li><a href="#content"><i class="fas fa-image"></i> Content</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <section class="overview">
+                <h2>Overview</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Total Earnings</h3>
+                        <p>$1,234.56</p>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <h3>Subscribers</h3>
+                        <p>567</p>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-image"></i>
+                        <h3>Posts</h3>
+                        <p>123</p>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Messages</h3>
+                        <p>456</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent-posts">
+                <h2>Recent Posts</h2>
+                <div class="post-list">
+                    <!-- Post items would be dynamically inserted here -->
+                    <div class="post-item">
+                        <img src="photos/corina.png" alt="Post Thumbnail">
+                        <div class="post-info">
+                            <h3>Post Title</h3>
+                            <p>Posted on: January 29, 2025</p>
+                            <p>Likes: 100 | Comments: 20</p>
+                        </div>
+                    </div>
+                    <!-- More post items would go here -->
+                </div>
+            </section>
+
+            <section class="messages">
+                <h2>Messages</h2>
+                <div class="message-list">
+                    <!-- Message items would be dynamically inserted here -->
+                    <div class="message-item">
+                        <p><strong>From: </strong>SPEED</p>
+                        <p>SSSSSUUUUUUUUUUIIIIII!!!!</p>
+                    </div>
+                    <!-- More message items would go here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="dashboard-footer">
+        <p>© 2025 Lustloop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
