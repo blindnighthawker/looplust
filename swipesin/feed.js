@@ -2,11 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoFeed = document.getElementById('video-feed');
     const createVideoBtn = document.getElementById('create-video');
 
-    // Simulated data for videos
+    // Simulated data for videos with added user profile picture
     const videos = [
-        { id: 1, src: 'video1.mp4', user: '@user1', caption: 'First Video!' },
-        { id: 2, src: 'video2.mp4', user: '@user2', caption: 'Cool dance moves' },
-        // More video entries here...
+        { id: 1, src: '/photos/video1.mp4', user: '@Corinna', caption: 'First Video!', profilePic: '/photos/corina.png' },
+        { id: 2, src: '/photos/video1.mp4', user: '@Corinna', caption: 'Cool dance moves', profilePic: '/photos/corina.png' },
     ];
 
     // Function to create video item
@@ -18,12 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 <source src="${video.src}" type="video/mp4">
             </video>
             <div class="video-info">
-                <h3>${video.user}</h3>
-                <p>${video.caption}</p>
+                <div class="user-profile">
+                    <img src="${video.profilePic}" alt="${video.user}" class="profile-pic">
+                    <span class="username">${video.user}</span>
+                </div>
+                <p class="caption">${video.caption}</p>
                 <div class="video-actions">
-                    <button class="like">❤</button>
-                    <button class="comment">💬</button>
-                    <button class="share">🔁</button>
+                    <button class="like" title="Like"><i class="fa-solid fa-heart"></i></button>
+                    <button class="comment" title="Comment"><i class="fa-solid fa-comment"></i></button>
+                    <button class="share" title="Share"><i class="fa-solid fa-share"></i></button>
+                    <button class="save" title="Save"><i class="fa-solid fa-bookmark"></i></button>
                 </div>
             </div>
         `;
@@ -33,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Populate video feed
     videos.forEach(video => videoFeed.appendChild(createVideoItem(video)));
 
-    // Infinite scroll
+    // Infinite scroll (left as is for simplicity)
     let currentPage = 1;
     const itemsPerPage = 10;
     window.addEventListener('scroll', () => {
@@ -49,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPage++;
     }
 
-    // Navigation
+    // Navigation (left as is)
     document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -58,12 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Create Video Button
+    // Create Video Button (left as is)
     createVideoBtn.addEventListener('click', () => {
         alert('Open video creation modal here');
     });
 
-    // Toggle Sidebar on Mobile
+    // Toggle Sidebar on Mobile (left as is)
     const sidebar = document.querySelector('.sidebar');
     document.querySelector('.logo').addEventListener('click', () => {
         sidebar.classList.toggle('open');
