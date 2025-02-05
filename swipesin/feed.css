@@ -43,11 +43,10 @@ body, html {
 }
 
 .logo-img {
-    width: 150px; /* Adjust as needed */
-    height: auto; /* Keeps aspect ratio */
+    width: 150px; 
+    height: auto; 
     margin-right: 10px;
 }
-
 
 .search-bar {
     width: 100%;
@@ -79,8 +78,18 @@ body, html {
     transition: color 0.3s;
 }
 
+.nav-menu a i {
+    color: #EE6D8A; /* Icon color */
+    margin-right: 15px; /* Space between icon and text */
+    font-size: 24px;
+}
+
 .nav-menu a:hover {
     color: var(--primary-color);
+}
+
+.nav-menu a:hover i {
+    color: var(--primary-color); /* Icon color on hover */
 }
 
 .nav-menu .icon {
@@ -130,19 +139,41 @@ body, html {
     color: #aaa;
 }
 
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.caption {
+    margin: 0;
+}
+
 .video-actions {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10px 0;
 }
 
 .video-actions button {
-    background-color: transparent;
+    background: none;
     border: none;
     color: var(--text-color);
     cursor: pointer;
-    font-size: 20px;
-    transition: color 0.3s;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
 }
 
 .video-actions button:hover {
@@ -159,7 +190,7 @@ body, html {
 #create-video {
     width: 100%;
     padding: 15px;
-    background-color: #EE6D8A;
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
     border-radius: var(--border-radius);
@@ -171,25 +202,18 @@ body, html {
 }
 
 #create-video:hover {
-    background-color: #d85d7a; /* A darker shade of the original color for hover effect */
-    transform: scale(1.02); /* Slight scale up on hover for a press effect */
+    background-color: #d85d7a;
+    transform: scale(1.02);
 }
 
 #create-video:active {
-    transform: scale(0.98); /* Slight scale down on click for a pressed effect */
+    transform: scale(0.98);
 }
 
 #user-profile {
     display: flex;
     align-items: center;
     margin-top: 20px;
-}
-
-.profile-pic {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
 }
 
 .footer {
