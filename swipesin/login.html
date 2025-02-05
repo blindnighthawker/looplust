@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Lustloop</title>
+    <header class="profile-header">
+        <div class="logo">
+            <img src="/photos/logo.png" alt="Lustloop Logo">
+        </div>
+    </header>
     <style>
         /* Authentication Page Styling */
         * {
@@ -78,6 +83,21 @@
 
         .auth-container a:hover {
             text-decoration: underline;
+        }
+        
+        header {
+            background: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: center; /* Changed from space-between to center */
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo img {
+            height: 50px;
         }
     </style>
 </head>
